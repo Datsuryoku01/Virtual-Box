@@ -1,0 +1,44 @@
+・拡張パックのインストールをすること。
+
+・グループに登録
+　sudo groupadd vboxsf
+    sudo gpasswd -a datsu  vboxsf
+
+　sudo adduser $USER vboxsf
+
+
+・Guest Addition CDイメージの挿入後
+    apt update
+    apt upgrade #To install Linux headers
+    apt install gcc
+    apt install make
+    cd /media/"username"/VBOX*  ディレクトリ名を確認
+    ./VBoxLinuxAdditions.run
+    reboot
+
+・sudo passwd root
+　適当なパスワードを入れる
+
+ ---
+
+ ・ソフトウェアの追加と削除
+　python pip　を検索、関連もインストール
+　python venvを検索、関連もインストール
+　仮想環境を作成、アクチベート
+　jupyter lab　インストール
+　neuralprophet　インストール
+
+・グループに登録
+  sudo gpasswd -a datsu  vboxsf
+  共有フォルダを設定。再起動して共有フォルダが有効になる。
+
+・ソフトウェアの追加と削除の設定から
+　flatpakを有効にする
+　AUR、snapもあるが設定しなかった
+　再起動する
+
+・chrome、brave、operaをflatpacからインストール
+　firefoxをアンインストール
+
+・最初のinput-methodをみて、インストールする
+　再起動
